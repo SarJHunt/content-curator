@@ -4,16 +4,18 @@ import { useEffect, useRef, useState } from "react"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 
-export function DynamicBackground() {
+export default function DynamicBackground() {
   const { theme } = useTheme()
   const containerRef = useRef<HTMLDivElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollPosition, setScrollPosition] = useState(0)
   const [viewportHeight, setViewportHeight] = useState(0)
   const [viewportWidth, setViewportWidth] = useState(0)
+  const [isClient, setIsClient] = useState(false) // Track if the component is mounted on the client
 
-  // Track mouse movement
   useEffect(() => {
+    setIsClient(true) // Mark the component as mounted on the client
+
     const handleMouseMove = (e: MouseEvent) => {
       if (containerRef.current) {
         const { clientX, clientY } = e
@@ -21,12 +23,10 @@ export function DynamicBackground() {
       }
     }
 
-    // Track scroll position
     const handleScroll = () => {
       setScrollPosition(window.scrollY)
     }
 
-    // Track viewport dimensions
     const handleResize = () => {
       setViewportHeight(window.innerHeight)
       setViewportWidth(window.innerWidth)
@@ -46,27 +46,23 @@ export function DynamicBackground() {
     }
   }, [])
 
-  const gradientPosition1 = {
-    x: (mousePosition.x / viewportWidth) * 100,
-    y: typeof document !== 'undefined' && document.body
-      ? ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100
-      : 0, // Fallback value for non-browser environments
-  };
-  
-  const gradientPosition2 = {
-    x: 100 - (mousePosition.x / viewportWidth) * 100,
-    y: typeof document !== 'undefined' && document.body
-      ? 100 - ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100
-      : 0, // Fallback value for non-browser environments
-  };
+  const gradientPosition1 = isClient
+    ? { x: (mousePosition.x / viewportWidth) * 100, y: (mousePosition.y / viewportHeight) * 100 }
+    : { x: 50, y: 50 } // Default values for server rendering
 
-  // Adjust colors based on theme and scroll position
-  const primaryColor = theme === "dark" ? "hsla(252, 59%, 54%, 0.15)" : "hsla(252, 59%, 48%, 0.1)"
-  const secondaryColor = theme === "dark" ? "hsla(186, 83%, 42%, 0.15)" : "hsla(186, 83%, 42%, 0.1)"
+  const gradientPosition2 = isClient
+    ? { x: (mousePosition.x / viewportWidth) * 100, y: (mousePosition.y / viewportHeight) * 100 }
+    : { x: 50, y: 50 } // Default values for server rendering
 
-  // Adjust intensity based on scroll position
+  const currentTheme = theme || "light" // Default to "light" if theme is undefined
+
+  const primaryColor =
+    currentTheme === "dark" ? "hsla(252, 59%, 54%, 0.15)" : "hsla(252, 59%, 48%, 0.1)"
+  const secondaryColor =
+    currentTheme === "dark" ? "hsla(186, 83%, 42%, 0.15)" : "hsla(186, 83%, 42%, 0.1)"
+
   const scrollPercentage = Math.min(scrollPosition / 1000, 1)
-  const intensityFactor = 1 - scrollPercentage * 0.5 // Reduce intensity as user scrolls
+  const intensityFactor = 1 - scrollPercentage * 0.5
 
   return (
     <div ref={containerRef} className="fixed inset-0 -z-10 pointer-events-none overflow-hidden" aria-hidden="true">
@@ -82,4 +78,3 @@ export function DynamicBackground() {
     </div>
   )
 }
-

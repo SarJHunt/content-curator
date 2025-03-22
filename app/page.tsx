@@ -8,10 +8,13 @@ import FloatingElement from "@/components/animations/floating-element"
 import { ScrollIndicator } from "@/components/common/scroll-indicator"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { DynamicBackground } from "@/components/effects/dynamic-background"
+import DynamicBackgroundWrapper from "@/components/effects/DynamicBackgroundWrapper"
 import { SmartContentSection } from "@/components/features/smart-content-section"
 import { SmartCTA } from "@/components/features/smart-cta"
 import { IntelligentScrollAnimations, ParallaxSection } from "@/components/animations/intelligent-scroll-animations"
+
+// Dynamically import DynamicBackground with SSR disabled
+// Dynamically import DynamicBackground with SSR disabled
 
 export default function Home() {
   return (
@@ -20,8 +23,8 @@ export default function Home() {
       <Header />
 
       {/* Dynamic Background that responds to user movement */}
-      <DynamicBackground />
-
+      <DynamicBackgroundWrapper />
+      
       {/* Hero Section */}
       <section className="relative pt-24 md:pt-32 pb-24 md:pb-32 overflow-hidden min-h-[90vh] flex items-center">
         <HeroParticles />
