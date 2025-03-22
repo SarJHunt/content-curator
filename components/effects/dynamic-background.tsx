@@ -46,16 +46,19 @@ export function DynamicBackground() {
     }
   }, [])
 
-  // Calculate gradient positions based on mouse and scroll
   const gradientPosition1 = {
     x: (mousePosition.x / viewportWidth) * 100,
-    y: ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100,
-  }
-
+    y: typeof document !== 'undefined' && document.body
+      ? ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100
+      : 0, // Fallback value for non-browser environments
+  };
+  
   const gradientPosition2 = {
     x: 100 - (mousePosition.x / viewportWidth) * 100,
-    y: 100 - ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100,
-  }
+    y: typeof document !== 'undefined' && document.body
+      ? 100 - ((mousePosition.y + scrollPosition) / (viewportHeight + document.body.scrollHeight)) * 100
+      : 0, // Fallback value for non-browser environments
+  };
 
   // Adjust colors based on theme and scroll position
   const primaryColor = theme === "dark" ? "hsla(252, 59%, 54%, 0.15)" : "hsla(252, 59%, 48%, 0.1)"
