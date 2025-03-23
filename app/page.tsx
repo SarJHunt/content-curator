@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Code, MessageSquare, Sparkles, Zap } from "lucide-react"
+import { ArrowRight, BookOpenText, Code, Lightbulb, MessageSquare, Sparkles, Waypoints, Zap } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -12,7 +12,7 @@ import DynamicBackgroundWrapper from "@/components/effects/DynamicBackgroundWrap
 import { SmartContentSection } from "@/components/features/smart-content-section"
 import { SmartCTA } from "@/components/features/smart-cta"
 import { IntelligentScrollAnimations, ParallaxSection } from "@/components/animations/intelligent-scroll-animations"
-
+import { AIChatWidget } from "@/components/ai-chat-widget"
 // Dynamically import DynamicBackground with SSR disabled
 // Dynamically import DynamicBackground with SSR disabled
 
@@ -40,16 +40,15 @@ export default function Home() {
             </FloatingElement>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
-              <AnimatedText text="Making AI" delay={0.1} />
+              <AnimatedText text="Building the future" delay={0.1} />
               <br />
-              <AnimatedText text="Work for" delay={0.2} />
+              <AnimatedText text="of AI." delay={0.2} />
               <br />
-              <AnimatedText text="Humans" gradient={true} delay={0.3} />
+              <AnimatedText text="Today" gradient={true} delay={0.3} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-[700px] mx-auto">
-              I help creators, startups, and businesses harness the power of AI without the corporate jargon and
-              complexity.
+              Hi, I'm Chris and I help people harness the power of AI.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -100,7 +99,7 @@ export default function Home() {
             <IntelligentScrollAnimations delay={0.1}>
               <FloatingElement delay={0} yOffset={6} duration={5}>
                 <ServiceCard
-                  icon={<Brain className="h-8 w-8" />}
+                  icon={<Waypoints className="h-8 w-8" />}
                   title="AI Strategy"
                   description="Let's figure out how AI can actually help your specific situation, not just what's trendy."
                   gradient="from-primary/20 to-primary/5"
@@ -155,7 +154,7 @@ export default function Home() {
             <IntelligentScrollAnimations delay={0.6}>
               <FloatingElement delay={0.5} yOffset={6} duration={4.9}>
                 <ServiceCard
-                  icon={<Brain className="h-8 w-8" />}
+                  icon={<BookOpenText className="h-8 w-8" />}
                   title="AI Education"
                   description="Learn how to use AI tools effectively in your work through personalized workshops and training."
                   gradient="from-secondary/20 to-secondary/5"
@@ -348,7 +347,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">hello@aiwizard.com</p>
+                      <p className="text-muted-foreground">hello@chrismeah.com</p>
                     </div>
                   </div>
 
@@ -473,7 +472,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <AIChatWidget />
       {/* Footer */}
       <Footer />
     </div>

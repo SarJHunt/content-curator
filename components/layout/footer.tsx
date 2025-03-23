@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Brain } from "lucide-react"
+import { BrainCircuit } from "lucide-react"
 
 export function Footer() {
   return (
@@ -7,8 +7,8 @@ export function Footer() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <Brain className="h-6 w-6 text-primary" />
-            <span className="gradient-text font-bold text-xl">AI Wizard</span>
+            <BrainCircuit className="h-6 w-6 text-primary" />
+            <span className="gradient-text font-bold text-xl">Dr Chris Meah</span>
           </div>
 
           <div className="text-sm text-muted-foreground text-center md:text-left">

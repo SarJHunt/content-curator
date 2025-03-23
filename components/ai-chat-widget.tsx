@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Send, X, Minimize2, Maximize2, Bot } from "lucide-react"
+import { Send, X, Minimize2, Maximize2, MessageCircleQuestion } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import FloatingElement from "@/components/floating-element"
@@ -19,7 +19,7 @@ export function AIChatWidget() {
   const [isMinimized, setIsMinimized] = useState(false)
   const [input, setInput] = useState("")
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hi there! I'm your AI assistant. How can I help you today?" },
+    { role: "assistant", content: "Hi there! How can I help you today?" },
   ])
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -75,7 +75,7 @@ export function AIChatWidget() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(true)}
           >
-            <Bot className="h-6 w-6" />
+            <MessageCircleQuestion className="h-6 w-6" />
           </motion.button>
         </FloatingElement>
       )}

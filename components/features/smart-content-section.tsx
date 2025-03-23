@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Sparkles } from "lucide-react"
+import { Lightbulb } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedText from "@/components/common/animated-text"
 
@@ -100,10 +100,10 @@ export function SmartContentSection() {
     <div className="py-12">
       <div className="flex items-center justify-center mb-8">
         <div className="bg-gradient-to-r from-primary/20 to-secondary/20 p-2 rounded-full mr-3">
-          <Sparkles className="h-5 w-5 text-primary" />
+          <Lightbulb className="h-5 w-5 text-primary" />
         </div>
         <h3 className="text-xl md:text-2xl font-bold">
-          <AnimatedText text="Insights For You" gradient={true} />
+          <AnimatedText text="Insights" gradient={true} />
         </h3>
       </div>
 

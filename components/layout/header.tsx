@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
-import { Brain, Menu, X } from "lucide-react"
+import { BrainCircuit, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggleButton } from "@/components/common/theme-toggle-button"
 
@@ -87,8 +87,8 @@ export function Header() {
     >
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl z-50">
-          <Brain className="h-6 w-6 text-primary" />
-          <span className="gradient-text">AI Wizard</span>
+          <BrainCircuit className="h-6 w-6 text-primary" />
+          <span className="gradient-text">Dr Chris Meah</span>
         </Link>
 
         {/* Desktop Navigation */}

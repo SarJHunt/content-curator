@@ -57,9 +57,9 @@ export default function DynamicBackground() {
   const currentTheme = theme || "light" // Default to "light" if theme is undefined
 
   const primaryColor =
-    currentTheme === "dark" ? "hsla(252, 59%, 54%, 0.15)" : "hsla(252, 59%, 48%, 0.1)"
+    currentTheme === "dark" ? "hsla(252, 59%, 54%, 0.15)" : "hsla(252, 59%, 48%, 0.2)"
   const secondaryColor =
-    currentTheme === "dark" ? "hsla(186, 83%, 42%, 0.15)" : "hsla(186, 83%, 42%, 0.1)"
+    currentTheme === "dark" ? "hsla(186, 83%, 42%, 0.15)" : "hsla(186, 83%, 42%, 0.2)"
 
   const scrollPercentage = Math.min(scrollPosition / 1000, 1)
   const intensityFactor = 1 - scrollPercentage * 0.5
@@ -69,8 +69,8 @@ export default function DynamicBackground() {
       <motion.div
         className="absolute inset-0 will-change-auto"
         animate={{
-          background: `radial-gradient(circle at ${gradientPosition1.x}% ${gradientPosition1.y}%, ${primaryColor} 0%, transparent 70%),
-                    radial-gradient(circle at ${gradientPosition2.x}% ${gradientPosition2.y}%, ${secondaryColor} 0%, transparent 70%)`,
+          background: `radial-gradient(circle at ${gradientPosition1.x}% ${gradientPosition1.y}%, ${primaryColor} 0%, transparent 60%),
+                    radial-gradient(circle at ${gradientPosition2.x}% ${gradientPosition2.y}%, ${secondaryColor} 0%, transparent 60%)`,
         }}
         transition={{ duration: 2, ease: "easeOut" }}
         style={{ opacity: intensityFactor }}

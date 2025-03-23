@@ -136,12 +136,12 @@ export function HeroParticles() {
               gradient.addColorStop(0, `hsla(252, 59%, 54%, ${opacity * 0.15})`)
               gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.15})`)
             } else {
-              gradient.addColorStop(0, `hsla(252, 59%, 48%, ${opacity * 0.1})`)
-              gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.1})`)
+              gradient.addColorStop(0, `hsla(252, 59%, 48%, ${opacity * 0.15})`)
+              gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.15})`)
             }
 
             ctx.strokeStyle = gradient
-            ctx.lineWidth = 1
+            ctx.lineWidth = 2
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
