@@ -36,15 +36,13 @@ export default function Home() {
               duration={4}
               yOffset={8}
             >
-              <span className="gradient-text font-medium">Independent AI Consultant</span>
+              <span className="gradient-text font-medium">The future of AI. Today.</span>
             </FloatingElement>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
-              <AnimatedText text="Building the future" delay={0.1} />
+              <AnimatedText text="Ready to harness" delay={0.1} />
               <br />
-              <AnimatedText text="of AI." delay={0.2} />
-              <br />
-              <AnimatedText text="Today" gradient={true} delay={0.3} />
+              <AnimatedText text="the power of AI?" gradient={true} delay={0.3} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-[700px] mx-auto">
@@ -65,7 +63,7 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-primary hover:bg-primary/10 transition-colors"
+                className="border-primary hover:bg-primary/40 transition-colors"
               >
                 <Link href="#services">See What I Do</Link>
               </Button>
