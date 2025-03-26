@@ -14,9 +14,9 @@ export default function ContactSection() {
           <div>
             <span className="text-secondary font-medium">GET IN TOUCH</span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter my-4">
-              <AnimatedText text="Let's Create" />
+              <AnimatedText text="Let's collaborate on" />
               <br />
-              <AnimatedText text="Something Amazing" gradient={true} />
+              <AnimatedText text="something amazing" gradient={true} />
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
               Have an idea? A problem that needs solving? Or just curious about what AI can do for you? I'd love to
@@ -46,68 +46,79 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div className="bg-background rounded-xl p-8 shadow-lg border border-border/50 relative overflow-hidden">
-            <form className="space-y-5">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Your Name
-                </label>
-                <input
-                  id="name"
-                  placeholder="What should I call you?"
-                  className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                />
-              </div>
+          <form
+  action="https://formspree.io/f/xblgkkbg" // Replace YOUR_FORM_ID with your Formspree form ID
+  method="POST"
+  className="space-y-5"
+>
+  <div className="space-y-2">
+    <label htmlFor="name" className="text-sm font-medium">
+      Your Name
+    </label>
+    <input
+      id="name"
+      name="name"
+      placeholder="What should I call you?"
+      className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
+    />
+  </div>
 
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Where can I reach you?"
-                  className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                />
-              </div>
+  <div className="space-y-2">
+    <label htmlFor="email" className="text-sm font-medium">
+      Your Email
+    </label>
+    <input
+      id="email"
+      name="email" // This ensures Formspree recognizes it as the reply-to email
+      type="email"
+      placeholder="Where can I reach you?"
+      className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
+    />
+  </div>
 
-              <div className="space-y-2">
-                <label htmlFor="project" className="text-sm font-medium">
-                  What do you need help with?
-                </label>
-                <select
-                  id="project"
-                  defaultValue=""
-                  className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                >
-                  <option value="" disabled>
-                    Select an option
-                  </option>
-                  <option value="strategy">AI Strategy</option>
-                  <option value="development">Custom AI Development</option>
-                  <option value="chatbot">AI Chatbot or Assistant</option>
-                  <option value="content">Content Generation</option>
-                  <option value="automation">Workflow Automation</option>
-                  <option value="education">AI Education/Training</option>
-                  <option value="other">Something Else</option>
-                </select>
-              </div>
+  <div className="space-y-2">
+    <label htmlFor="project" className="text-sm font-medium">
+      What do you need help with?
+    </label>
+    <select
+      id="project"
+      name="project" // Add a name attribute for Formspree
+      defaultValue=""
+      className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
+    >
+      <option value="" disabled>
+        Select an option
+      </option>
+      <option value="strategy">AI strategy</option>
+      <option value="development">Custom AI development</option>
+      <option value="chatbot">AI chatbot or assistant</option>
+      <option value="content">Content generation</option>
+      <option value="automation">Workflow automation</option>
+      <option value="education">AI education/training</option>
+      <option value="other">Something else</option>
+    </select>
+  </div>
 
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  placeholder="Tell me a bit about your project or question..."
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all resize-none"
-                ></textarea>
-              </div>
+  <div className="space-y-2">
+    <label htmlFor="message" className="text-sm font-medium">
+      Your Message
+    </label>
+    <textarea
+      id="message"
+      name="message" // Add a name attribute for Formspree
+      placeholder="Tell me a bit about your project or question..."
+      rows={4}
+      className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all resize-none"
+    ></textarea>
+  </div>
 
-              <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                Send Message <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+  <Button
+    type="submit" // Ensure the button submits the form
+    className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+  >
+    Send Message <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+</form>
           </div>
         </div>
       </div>

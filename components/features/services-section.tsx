@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Waypoints, Code, MessageSquare, Sparkles, Zap, BookOpenText } from "lucide-react";
+import { Waypoints, MessageSquare, Presentation } from "lucide-react";
 import ServiceCard from "@/components/features/service-card";
 import FloatingElement from "@/components/animations/floating-element";
 
@@ -9,45 +9,24 @@ const services = [
   {
     id: "strategy",
     icon: <Waypoints className="h-8 w-8" />,
-    title: "AI Strategy",
-    description: "Let's figure out how AI can actually help your specific situation, not just what's trendy.",
-    details: "AI Strategy involves understanding your business needs and creating a tailored plan to integrate AI effectively.",
+    title: "AI Strategy and training",
+    description: "Let's figure out how AI can actually help your specific situation.",
+    details: "AI strategy involves understanding your business needs and creating a tailored plan to integrate AI effectively.",
   },
   {
     id: "development",
-    icon: <Code className="h-8 w-8" />,
-    title: "Custom AI Development",
+    icon: <Presentation className="h-8 w-8" />,
+    title: "Public speaking",
     description: "Bespoke AI solutions built for your specific needs, whether it's automation, analysis, or creative tools.",
     details: "Custom AI Development includes building AI models, tools, or applications tailored to your business.",
   },
   {
     id: "chatbots",
     icon: <MessageSquare className="h-8 w-8" />,
-    title: "AI Chatbots & Assistants",
+    title: "AI thought leadership",
     description: "Conversational AI that actually understands your customers and represents your brand properly.",
     details: "AI Chatbots & Assistants provide seamless customer interactions, improving user experience and reducing workload.",
-  },
-  {
-    id: "content",
-    icon: <Sparkles className="h-8 w-8" />,
-    title: "Content Generation",
-    description: "AI tools that help you create better content faster, while keeping your unique voice and style.",
-    details: "Content Generation tools use AI to help you create engaging, high-quality content quickly.",
-  },
-  {
-    id: "automation",
-    icon: <Zap className="h-8 w-8" />,
-    title: "Workflow Automation",
-    description: "Identify and automate the tedious parts of your work so you can focus on what matters.",
-    details: "Workflow Automation streamlines repetitive tasks, saving time and improving efficiency.",
-  },
-  {
-    id: "education",
-    icon: <BookOpenText className="h-8 w-8" />,
-    title: "AI Education",
-    description: "Learn how to use AI tools effectively in your work through personalized workshops and training.",
-    details: "AI Education provides hands-on training to help you and your team understand and use AI tools effectively.",
-  },
+  }
 ];
 
 export default function ServicesSection() {
@@ -60,12 +39,12 @@ export default function ServicesSection() {
           <>
             {/* Default Grid View */}
             <div className="flex flex-col items-center text-center mb-16">
-              <span className="text-secondary font-medium mb-2">WHAT I OFFER</span>
+              <span className="text-secondary font-medium mb-2">LET'S GET STARTED</span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-                AI Solutions That Actually Make Sense
+                Unlocking AI potential
               </h2>
               <p className="text-muted-foreground text-lg max-w-[700px]">
-                No buzzwords, no hype—just practical AI applications tailored to your unique needs.
+                Build | Learn | Collaborate
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,7 +55,7 @@ export default function ServicesSection() {
                       icon={service.icon}
                       title={service.title}
                       description={service.description}
-                      gradient="from-primary/20 to-primary/5"
+                      gradient="from-primary/20 to-secondary/20"
                     />
                   </div>
                 </FloatingElement>

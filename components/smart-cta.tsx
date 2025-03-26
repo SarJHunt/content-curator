@@ -60,26 +60,25 @@ export function SmartCTA() {
     // For demo purposes, we'll simulate this with a timeout
     // and randomly select a variant (except for returning)
     const timer = setTimeout(() => {
-      const isReturningUser = localStorage.getItem("previousVisit") === "true"
-
+      const isReturningUser = localStorage.getItem("previousVisit") === "true";
+  
       if (isReturningUser) {
-        setVariant(ctaVariants.returning)
+        setVariant(ctaVariants.returning);
       } else {
-        // Analyze which sections the user spent most time on
-        // This would be tracked with actual analytics in production
-        const variants = ["creative", "business", "technical"]
-        const selectedVariant = variants[Math.floor(Math.random() * variants.length)]
-        setVariant(ctaVariants[selectedVariant])
+        // Dynamically get all keys except "returning"
+        const variants = Object.keys(ctaVariants).filter((key) => key !== "returning");
+        const selectedVariant = variants[Math.floor(Math.random() * variants.length)];
+        setVariant(ctaVariants[selectedVariant]);
       }
-
+  
       // Mark this visit for future reference
-      localStorage.setItem("previousVisit", "true")
-
-      setHasAnimated(true)
-    }, 5000) // After 5 seconds of page interaction
-
-    return () => clearTimeout(timer)
-  }, [])
+      localStorage.setItem("previousVisit", "true");
+  
+      setHasAnimated(true);
+    }, 5000); // After 5 seconds of page interaction
+  
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <motion.div

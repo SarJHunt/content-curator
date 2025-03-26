@@ -12,6 +12,7 @@ import { SmartContentSection } from "@/components/features/smart-content-section
 import { AIChatWidget } from "@/components/ai-chat-widget";
 import ServicesSection from "@/components/features/services-section";
 import ContactSection from "@/components/features/contact-section";
+import TestimonialWall from "@/components/features/testimonial-wall";
 import { ParallaxSection } from "@/components/intelligent-scroll-animations";
 
 // Dynamically import DynamicBackground with SSR disabled
@@ -41,13 +42,13 @@ export default function Home() {
             </FloatingElement>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
-              <AnimatedText text="Ready to harness" delay={0.1} />
+              <AnimatedText text="Discover" delay={0.1} />
               <br />
-              <AnimatedText text="the power of AI?" gradient={true} delay={0.3} />
+              <AnimatedText text="the power of AI" gradient={true} delay={0.3} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-[700px] mx-auto">
-              Hi, I'm Chris and I help people harness the power of AI.
+              Hi there! I'm Chris Meah and I build, train and speak about AI...
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -56,7 +57,7 @@ export default function Home() {
                 asChild
                 className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
               >
-                <Link href="#contact">
+                <Link href="#services">
                   Explore AI solutions <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -66,7 +67,7 @@ export default function Home() {
                 asChild
                 className="border-primary hover:bg-primary/40 transition-colors"
               >
-                <Link href="#services">About me</Link>
+                <Link href="#about">About me</Link>
               </Button>
             </div>
           </div>
@@ -80,7 +81,7 @@ export default function Home() {
       {/* About Content */}
       <div className="order-2 lg:order-1">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter my-4">
-          <AnimatedText text="Hi, I'm Chris" gradient={true} />
+          <AnimatedText text="About me" gradient={true} />
         </h2>
         <p className="text-muted-foreground mb-6 text-lg">
           I'm an independent AI consultant who believes technology should work for people, not the other way around.
@@ -165,7 +166,7 @@ export default function Home() {
           asChild
         >
           <Link href="#contact">
-            Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+            About the School of Code <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>
@@ -188,6 +189,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+<TestimonialWall />
 
       {/* Services Section */}
       <ServicesSection />

@@ -1,32 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import type { ReactNode } from "react"
+import { motion } from "framer-motion";
 
 interface FloatingElementProps {
-  children: ReactNode
-  delay?: number
-  duration?: number
-  className?: string
-  yOffset?: number
+  children: React.ReactNode;
+  delay?: number;
+  yOffset?: number;
+  duration?: number;
 }
 
 export default function FloatingElement({
   children,
   delay = 0,
-  duration = 3,
-  className = "",
   yOffset = 10,
+  duration = 4,
 }: FloatingElementProps) {
   return (
     <motion.div
-      className={className}
-      animate={{
-        y: [0, -yOffset, 0],
-      }}
+      initial={{ y: 0 }}
+      animate={{ y: [0, -yOffset, 0] }}
       transition={{
         duration: duration,
-        repeat: Number.POSITIVE_INFINITY,
+        repeat: Infinity,
         repeatType: "loop",
         ease: "easeInOut",
         delay: delay,
@@ -34,6 +29,5 @@ export default function FloatingElement({
     >
       {children}
     </motion.div>
-  )
+  );
 }
-
