@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Waypoints, MessageSquare, Presentation } from "lucide-react";
 import ServiceCard from "@/components/features/service-card";
 import FloatingElement from "@/components/animations/floating-element";
+import { InlineWidget } from "react-calendly"
 
 const services = [
   {
@@ -28,6 +29,7 @@ const services = [
     details: "AI Chatbots & Assistants provide seamless customer interactions, improving user experience and reducing workload.",
   }
 ];
+
 
 export default function ServicesSection() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -66,12 +68,12 @@ export default function ServicesSection() {
           <>
             {/* Detailed View */}
             <div className="relative bg-background p-8 rounded-lg shadow-lg">
-            <button
-  onClick={() => setSelectedService(null)}
-  className="absolute top-4 right-4 text-muted-foreground hover:text-primary text-2xl font-bold"
->
-  ✕
-</button>
+              <button
+                onClick={() => setSelectedService(null)}
+                className="absolute top-4 right-4 text-muted-foreground hover:text-primary text-2xl font-bold"
+              >
+                ✕
+              </button>
               {services
                 .filter((service) => service.id === selectedService)
                 .map((service) => (
@@ -80,9 +82,28 @@ export default function ServicesSection() {
                       {service.title}
                     </h2>
                     <p className="text-muted-foreground text-lg mb-6">{service.details}</p>
+
+                    {/* Embed Calendly for AI Strategy */}
+                    {service.id === "strategy" && (
+                      <div className="mt-6">
+                        <InlineWidget
+                          url="https://calendly.com/sarjanehunt" // Replace with your Calendly link
+                          styles={{
+                            height: "600px",
+                            width: "100%",
+                          }}
+                          pageSettings={{
+                            backgroundColor: "ffffff",
+                            primaryColor: "4f46e5", // Adjust to match your site's theme
+                            textColor: "000000",
+                          }}
+                        />
+                      </div>
+                    )}
+
                     <button
                       onClick={() => setSelectedService(null)}
-                      className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+                      className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity mt-6"
                     >
                       Back to Services
                     </button>
