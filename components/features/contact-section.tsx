@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "@/components/common/animated-text";
 
@@ -33,14 +33,28 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="rounded-full p-3 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 234-5678</p>
-                </div>
-              </div>
+              <a 
+    href="http://www.linkedin.com/in/chrismeah/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="rounded-full p-3 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary"
+  >
+    <Linkedin className="h-6 w-6" />
+  </a>
+</div>
+              <div className="flex items-center gap-4">
+  <a 
+    href="https://chrismeah.substack.com/p/thoughts-on-the-future" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/substack_wordmark.png"
+      alt="Substack"
+      className="h-6 w-auto" // Adjust the size as needed
+    />
+  </a>
+</div>
             </div>
           </div>
 
@@ -90,11 +104,11 @@ export default function ContactSection() {
         Select an option
       </option>
       <option value="strategy">AI strategy</option>
-      <option value="development">Custom AI development</option>
-      <option value="chatbot">AI chatbot or assistant</option>
-      <option value="content">Content generation</option>
-      <option value="automation">Workflow automation</option>
       <option value="education">AI education/training</option>
+      <option value="speaking">Public speaking</option>
+      <option value="development">Custom AI development</option>
+      <option value="speaking">Public speaking</option>
+      <option value="content">Content generation</option>
       <option value="other">Something else</option>
     </select>
   </div>

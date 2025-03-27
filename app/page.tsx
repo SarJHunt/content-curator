@@ -38,17 +38,17 @@ export default function Home() {
               duration={4}
               yOffset={8}
             >
-              <span className="gradient-text font-medium">The future of AI. Today.</span>
+              <span className="gradient-text font-medium">Great to see you here!</span>
             </FloatingElement>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
-              <AnimatedText text="Discover" delay={0.1} />
+              <AnimatedText text="Unlocking the" delay={0.1} />
               <br />
-              <AnimatedText text="the power of AI" gradient={true} delay={0.3} />
+              <AnimatedText text="potential of AI" gradient={true} delay={0.3} />
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-[700px] mx-auto">
-              Hi there! I'm Chris Meah and I build, train and speak about AI...
+              Hi, I'm Chris Meah and I build, train and speak about AI...
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
