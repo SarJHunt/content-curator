@@ -9,8 +9,13 @@ export const metadata = {
   title: "AI Consultant | Expert AI Strategy & Implementation",
   description:
     "Professional AI consulting services to help businesses implement effective AI solutions and strategies.",
-    generator: 'v0.dev'
+  keywords: ["AI consulting", "AI strategy", "AI implementation", "machine learning"],
+  author: "Chris Meah",
+  charset: "UTF-8",
 }
+
+// Move viewport to a separate export
+export const viewport = "width=device-width, initial-scale=1.0"
 
 export default function RootLayout({
   children,
@@ -27,7 +32,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
