@@ -123,7 +123,7 @@ export function Header() {
             asChild
             className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
           >
-            <Link href="#contact">Let's Talk</Link>
+            <Link href="#contact">Let's talk</Link>
           </Button>
 
           {/* Mobile menu button */}

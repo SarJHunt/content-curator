@@ -12,7 +12,7 @@ export default function ToolsPage() {
         <div className="flex flex-col items-center text-center mb-12">
           <span className="text-secondary font-medium mb-2">AI TOOLS</span>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-            <AnimatedText text="Try My AI Tools" gradient={true} />
+            <AnimatedText text="Build something powerful" gradient={true} />
           </h1>
           <p className="text-muted-foreground text-lg max-w-[700px]">
             Experience the power of AI with these interactive tools. These are just a sample of what we can build
@@ -31,14 +31,10 @@ export default function ToolsPage() {
               <Sparkles className="h-6 w-6 text-primary" />
             </div>
           </div>
-          <h2 className="text-2xl font-bold mb-3">Want a Custom AI Tool?</h2>
-          <p className="text-muted-foreground mb-6">
-            These demos are just the beginning. I can build custom AI tools tailored specifically to your business
-            needs.
-          </p>
+          <h2 className="text-2xl font-bold mb-3">Want a custom AI tool?</h2>
           <Button asChild className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
-            <Link href="/contact">
-              Let's Build Something Together <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href="ContactSection">
+              Let's build something together <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

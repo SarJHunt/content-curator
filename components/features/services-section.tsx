@@ -10,21 +10,22 @@ const services = [
   {
     id: "strategy",
     icon: <Waypoints className="h-8 w-8" />,
-    title: "AI Strategy and training",
+    title: "Consultancy",
     description: "Let's figure out how AI can actually help your specific situation.",
-    details: "AI strategy involves understanding your business needs and creating a tailored plan to integrate AI effectively.",
+    details: "I offer bespoke, practical, and tailored consulting services and provide actionable outcomes to help your organisation adopt AI. I have experience helping organisations in public and private sectors.",
   },
   {
-    id: "development",
+    id: "speaking",
     icon: <Presentation className="h-8 w-8" />,
     title: "Public speaking",
-    description: "Bespoke AI solutions built for your specific needs, whether it's automation, analysis, or creative tools.",
-    details: "Custom AI Development includes building AI models, tools, or applications tailored to your business.",
+    description: "Book me to speak at your conference or else....",
+    details: "Elevate your event with a dynamic and insightful presentation where I translate complex concepts into actionable strategies and empower audiences to embrace AI's potential. I tailor presentations and talks to leave a lasting impact, I deliver a unique blend of cutting-edge theory and real-world application, ensuring the audience gains the knowledge and confidence to navigate the future of AI.",
+  
   },
   {
-    id: "chatbots",
+    id: "training",
     icon: <MessageSquare className="h-8 w-8" />,
-    title: "AI thought leadership",
+    title: "Training",
     description: "Conversational AI that actually understands your customers and represents your brand properly.",
     details: "AI Chatbots & Assistants provide seamless customer interactions, improving user experience and reducing workload.",
   }
@@ -94,8 +95,8 @@ export default function ServicesSection() {
                           }}
                           pageSettings={{
                             backgroundColor: "ffffff",
-                            primaryColor: "4f46e5", // Adjust to match your site's theme
-                            textColor: "000000",
+                            primaryColor: "7c0317", 
+                            textColor: "213547",
                           }}
                         />
                       </div>
