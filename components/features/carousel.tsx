@@ -21,7 +21,7 @@ export default function EmblaCarousel({ slides }: { slides: { image: string; tit
 
   return (
     <div className="relative">
-      {/* Carousel Container */}
+      {/* Carousel container */}
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex gap-4">
           {slides.map((slide, index) => (
@@ -34,7 +34,7 @@ export default function EmblaCarousel({ slides }: { slides: { image: string; tit
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation arrows */}
       <button
         onClick={scrollPrev}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full shadow hover:bg-primary/90"

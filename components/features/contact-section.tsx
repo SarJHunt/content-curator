@@ -10,7 +10,7 @@ export default function ContactSection() {
 
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+          {/* Contact info */}
           <div>
             <span className="text-secondary font-medium">GET IN TOUCH</span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter my-4">
@@ -58,10 +58,10 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Contact form */}
           <div className="bg-background rounded-xl p-8 shadow-lg border border-border/50 relative overflow-hidden">
           <form
-  action="https://formspree.io/f/xblgkkbg" // Replace YOUR_FORM_ID with your Formspree form ID
+  action="https://formspree.io/f/xblgkkbg" 
   method="POST"
   className="space-y-5"
 >
@@ -83,7 +83,7 @@ export default function ContactSection() {
     </label>
     <input
       id="email"
-      name="email" // This ensures Formspree recognizes it as the reply-to email
+      name="email" // This ensures Formspree recognises it as the reply-to email
       type="email"
       placeholder="Where can I reach you?"
       className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"

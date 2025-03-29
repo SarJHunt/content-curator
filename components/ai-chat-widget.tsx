@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Send, X, Minimize2, Maximize2, MessageCircleQuestion } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import FloatingElement from "@/components/floating-element"
+import FloatingElement from "@/components/animations/floating-element"
 
 interface Message {
   role: "user" | "assistant"

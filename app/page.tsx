@@ -26,13 +26,13 @@ export default function Home() {
   const [showSchoolOfCode, setShowSchoolOfCode] = useState(false);
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      {/* AI-Enhanced Navigation */}
+      {/* AI-enhanced navigation */}
       <Header />
 
-      {/* Dynamic Background */}
+      {/* Dynamic background */}
       <DynamicBackgroundWrapper />
 
-      {/* Hero Section */}
+      {/* Hero section */}
       <section className="relative pt-24 md:pt-32 pb-24 md:pb-32 overflow-hidden min-h-[90vh] flex items-center">
         <HeroParticles />
         <div className="container px-4 md:px-6 relative z-10">
@@ -82,9 +82,9 @@ export default function Home() {
         <section id="about" className="py-20 md:py-32 relative">
   <div className="container px-4 md:px-6">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      {/* Toggle Between About Me and About the School of Code */}
+      {/* Toggle between about me and about the School of Code */}
       {!showSchoolOfCode ? (
-        // About Me Section
+        // About me Section
         <div className="order-2 lg:order-1">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter my-4">
             About me
@@ -145,11 +145,11 @@ export default function Home() {
           </Button>
         </div>
       ) : (
-        // About the School of Code Section
+        // About the School of Code section
         <AboutSchoolOfCode onBack={() => setShowSchoolOfCode(false)} />
       )}
 
-      {/* About Image with Parallax */}
+      {/* About image with parallax */}
       {!showSchoolOfCode && (
         <div className="order-1 lg:order-2 flex justify-center">
           <ParallaxSection>
@@ -171,20 +171,20 @@ export default function Home() {
 </section>
 <TestimonialWall />
 
-      {/* Services Section */}
+      {/* Services section */}
       <ServicesSection />
 
-      {/* Smart Content Section */}
+      {/* Smart content section */}
       <section className="py-12 md:py-20">
         <div className="container px-4 md:px-6">
           <SmartContentSection />
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact section */}
       <ContactSection />
 
-      {/* AI Chat Widget */}
+      {/* AI chat widget */}
       <AIChatWidget />
 
       {/* Footer */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import FloatingElement from "@/components/floating-element";
+import FloatingElement from "@/components/animations/floating-element";
 
 const testimonials = [
   {

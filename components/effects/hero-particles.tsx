@@ -52,7 +52,7 @@ export function HeroParticles() {
         this.pulseSpeed = Math.random() * 0.1
         this.pulseDirection = 1
 
-        // Create a mix of primary and secondary colors
+        // Create a mix of primary and secondary colours
         const colorType = Math.random()
         if (isDark) {
           if (colorType < 0.5) {
@@ -95,7 +95,7 @@ export function HeroParticles() {
       }
     }
 
-    // Initialize particles
+    // Initialise particles
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle())
     }

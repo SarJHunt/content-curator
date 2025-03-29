@@ -9,7 +9,7 @@ export default function AboutSchoolOfCode({ onBack }: { onBack: () => void }) {
 
   return (
     <div className="fixed inset-0 bg-background z-50 flex flex-col items-center justify-center p-4">
-      {/* Close Button */}
+      {/* Close button */}
       <button
         onClick={onBack}
         className="absolute top-4 right-4 text-muted-foreground hover:text-primary text-lg"
