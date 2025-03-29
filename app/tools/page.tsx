@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { AIImageGenerator } from "@/components/ai-image-generator"
 import { AITextAnalyzer } from "@/components/ai-text-analyzer"
-import AnimatedText from "@/components/animated-text"
+import AnimatedText from "@/components/common/animated-text"
 
 export default function ToolsPage() {
   return (
