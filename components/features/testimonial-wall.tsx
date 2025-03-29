@@ -10,15 +10,15 @@ const testimonials = [
     role: "Technology from Sage",
     photo: "/nadeem.jpg",
     testimonial:
-      "Chris helped us implement AI solutions that transformed our business processes. His expertise is unmatched!",
+      "Being part of School Of Code has been one of those rare, transformative experiences. As Chris wraps up this incredible 10-year journey, I find myself reflecting on the impact School of Code has had and the many individuals whose paths have been reshaped by this mission.",
   },
   {
     id: 2,
-    name: "John Smith",
-    role: "Founder, InnovateX",
-    photo: "/john-smith.jpg",
+    name: "Clare Streets",
+    role: "Former bootcamper",
+    photo: "Clare Streets.png",
     testimonial:
-      "The AI training sessions were incredibly insightful. Chris made complex topics easy to understand.",
+      "The School of Code Bootcamp provides so much more than just software development training. It's an all-encompassing introduction to the tech industry and its network gives it the edge in making it a job ready experience. It’s very intensive and requires great commitment but worth every moment. Entirely life changing experience.",
   },
   {
     id: 3,

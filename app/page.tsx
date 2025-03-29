@@ -43,7 +43,7 @@ export default function Home() {
               duration={4}
               yOffset={8}
             >
-              <span className="gradient-text font-medium">Great to see you here!</span>
+              <span className="gradient-text font-medium">Consultancy | Training | Public speaking</span>
             </FloatingElement>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">

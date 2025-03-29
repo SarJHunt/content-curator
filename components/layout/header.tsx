@@ -9,8 +9,9 @@ import { ThemeToggleButton } from "@/components/common/theme-toggle-button"
 
 // This would be populated from analytics in a real implementation
 const popularSections = [
-  { name: "Services", href: "#services" },
   { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Testimonials", href: "#testimonials"},
   { name: "Contact", href: "#contact" },
 ]
 
@@ -22,7 +23,7 @@ export function Header() {
   const [navItems, setNavItems] = useState(popularSections)
   const [hasAdapted, setHasAdapted] = useState(false)
 
-  // Handle scroll behavior
+  // Handle scroll behaviour
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -53,21 +54,22 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [lastScrollY])
 
-  // Simulate AI adapting navigation based on user behavior
+  // Simulate AI adapting navigation based on user behaviour
   useEffect(() => {
-    // In a real implementation, this would analyze:
+    // In a real implementation, this would analyse:
     // 1. Most visited sections
     // 2. Time spent on each section
     // 3. User's click patterns
     // 4. Previous visits
 
-    // For demo purposes, we'll simulate this with a timeout
+    // For demo purposes, it'll simulate this with a timeout
     const timer = setTimeout(() => {
-      // Add "AI Tools" to navigation if user has scrolled past services
+      // Add "AI tools" to navigation if user has scrolled past services
       if (lastScrollY > 500 && !hasAdapted) {
         setNavItems([
           { name: "Services", href: "#services" },
           { name: "About", href: "#about" },
+          { name: "Testimonials", href: "#testimonials"},
           { name: "AI Tools", href: "/tools" },
           { name: "Contact", href: "#contact" },
         ])

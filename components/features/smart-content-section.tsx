@@ -6,15 +6,15 @@ import { Lightbulb } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedText from "@/components/common/animated-text"
 
-// This would be populated from your CMS or content database
+// This would be populated from content database
 const contentPieces = [
   {
     id: 1,
-    title: "Automating Content Creation",
-    description: "How AI can help you create consistent, high-quality content without sacrificing your unique voice.",
+    title: "Thoughts on the future",
+    description: "Chris Meah's thoughts in March 2025 on the future of AI.",
     category: "content",
     readTime: 4,
-    image: "/nadeem.jpg", // Add image URLs here
+    image: "/boy future.png", 
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export function SmartContentSection() {
   const [userInterests, setUserInterests] = useState<string[]>([]);
   const [hasInteracted, setHasInteracted] = useState(false);
 
-  // Simulate AI analyzing user behavior
+  // Simulate AI analysing user behaviour
   useEffect(() => {
     const initialInterests = ["content", "creativity"];
     setUserInterests(initialInterests);

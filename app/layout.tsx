@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "AI Consultant | Expert AI Strategy & Implementation",
+  title: "AI consultancy | AI training | Building AI",
   description:
     "Professional AI consulting services to help businesses implement effective AI solutions and strategies.",
   keywords: ["AI consulting", "AI strategy", "AI implementation", "machine learning"],

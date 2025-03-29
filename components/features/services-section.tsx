@@ -88,7 +88,7 @@ export default function ServicesSection() {
                     {service.id === "strategy" && (
                       <div className="mt-6">
                         <InlineWidget
-                          url="https://calendly.com/sarjanehunt" // Replace with your Calendly link
+                          url="https://calendly.com/sarjanehunt" 
                           styles={{
                             height: "600px",
                             width: "100%",
