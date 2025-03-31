@@ -16,7 +16,7 @@ const testimonials = [
     id: 2,
     name: "Clare Streets",
     role: "Former bootcamper",
-    photo: "Clare Streets.png",
+    photo: "/Clare Streets.png",
     testimonial:
       "The School of Code Bootcamp provides so much more than just software development training. It's an all-encompassing introduction to the tech industry and its network gives it the edge in making it a job ready experience. It’s very intensive and requires great commitment but worth every moment. Entirely life changing experience.",
   },

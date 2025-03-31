@@ -14,7 +14,7 @@ const contentPieces = [
     description: "Chris Meah's thoughts in March 2025 on the future of AI.",
     category: "content",
     readTime: 4,
-    image: "/boy future.png", 
+    image: "/boy-future.png", 
   },
   {
     id: 2,
@@ -103,12 +103,14 @@ export function SmartContentSection() {
               transition={{ duration: 0.5 }}
             >
               <Card
-                className="h-80 cursor-pointer hover:shadow-md transition-all border border-primary/10 overflow-hidden"
+                className="h-80 cursor-pointer hover:shadow-md transition-all border overflow-hidden"
                 onClick={() => handleContentInteraction(content.category)}
               >
                 {/* Image Section */}
-                <div className="h-2/3 bg-cover bg-center" style={{ backgroundImage: `url('/nadeem.jpg')` }}>
-                  {/* Replace '/placeholder.jpg' with dynamic image URLs if available */}
+                <div
+                  className="h-2/3 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${content.image})` }}
+                >
                 </div>
 
                 {/* Title Section */}

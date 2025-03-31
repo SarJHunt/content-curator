@@ -28,9 +28,9 @@ export default function AnimatedText({ text, className = "", gradient = false, d
       initial="hidden"
       animate={controls}
       variants={{
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 1, y: 20 },
         visible: {
-          opacity: 1,
+          opacity: 2,
           y: 0,
           transition: {
             duration: 0.6,

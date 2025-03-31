@@ -3,8 +3,8 @@ import EmblaCarousel from "@/components/features/carousel"; // Import your carou
 export default function AboutSchoolOfCode({ onBack }: { onBack: () => void }) {
   const slides = [
     { image: "/nadeem.jpg", title: "Intensive bootcamp", description: "13 weeks of immersive coding experience." },
-    { image: "/image2.jpg", title: "Card 2", description: "Description for card 2" },
-    { image: "/image3.jpg", title: "Card 3", description: "Description for card 3" },
+    { image: "/microsoft visit.jpg", title: "Card 2", description: "Description for card 2" },
+    { image: "/alumni panel.jpg", title: "Card 3", description: "Description for card 3" },
   ];
 
   return (
@@ -12,7 +12,7 @@ export default function AboutSchoolOfCode({ onBack }: { onBack: () => void }) {
       {/* Close button */}
       <button
         onClick={onBack}
-        className="absolute top-4 right-4 text-muted-foreground hover:text-primary text-lg"
+        className="absolute top-4 right-4 text-muted-foreground hover:text-primary text-XL"
       >
         X
       </button>
