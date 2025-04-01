@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpenCheck } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "@/components/common/animated-text";
@@ -90,53 +90,52 @@ export default function Home() {
             About me
           </h2>
           <p className="text-muted-foreground mb-6 text-lg">
-            My background is AI, Computer Vision, and Biomedical Imaging. 
-            I completed my PhD and MSc at the University of Birmingham, graduating top of class for BSc in AI and Computer Science.
-
-            I love AI, but I couldn’t see past the cliff edge of automation I felt would impact people in the journey towards it, 
-            and so I set up the School of Code in 2014 to help people gain the confidence, capability, and community to help them thrive in the future.
-
-            I love big problems that seem unsolvable, or goals that seem impossible.
+            I build, research and help people learn AI, using my 10 years' experience as an educator.
+          My aim is to push technology forwards to benefit everyone. </p>
+          <p className="text-muted-foreground mb-6 text-lg">I founded the School of Code in 2014 to help people gain the confidence, capability, and community to help them thrive in the future.
+          </p>
+          <p className="text-muted-foreground mb-6 text-lg">
+            Get in touch if you would like to chat, you're looking for a speaker on AI or technology, or you think I can help you.
           </p>
           <div className="space-y-4 mb-8">
-            {/* Existing content */}
+          <div className="flex items-start gap-3">
+  <div className="rounded-full p-1 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary mt-1">
+    <BookOpenCheck className="h-6 w-6" />
+  </div>
+  <div>
+    <h3 className="font-medium">Founder & CEO, School of Code</h3>
+    <p className="text-sm text-muted-foreground">
+      xxxxxxxxxxxx
+    </p>
+  </div>
+</div>
+            <div className="space-y-4 mb-8">
             <div className="flex items-start gap-3">
-              <div className="rounded-full p-1 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary mt-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-check"
-                >
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-medium">Human-first approach</h3>
-                <p className="text-sm text-muted-foreground">
-                  I focus on how AI can enhance human capabilities, not replace them.
-                </p>
-              </div>
+  <div className="rounded-full p-1 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary mt-1">
+    <BookOpenCheck className="h-6 w-6" />
+  </div>
+  <div>
+    <h3 className="font-medium">UK Digital Leader of the Year 2022</h3>
+    <p className="text-sm text-muted-foreground">
+      xxxxxxxxxxxxxx
+    </p>
+  </div>
+</div>
+            <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+  <div className="rounded-full p-1 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary mt-1">
+    <BookOpenCheck className="h-6 w-6" />
+  </div>
+  <div>
+    <h3 className="font-medium">Creator, Zoom Hide & Seek</h3>
+    <p className="text-sm text-muted-foreground">
+      "Best thing I ever created"
+    </p>
+  </div>
+</div>
             </div>
-            <div>
-                <h3 className="font-medium">Human-first approach</h3>
-                <p className="text-sm text-muted-foreground">
-                  I focus on how AI can enhance human capabilities, not replace them.
-                </p>
             </div>
-              <div>
-                <h3 className="font-medium">Human-first approach</h3>
-                <p className="text-sm text-muted-foreground">
-                  I focus on how AI can enhance human capabilities, not replace them.
-                </p>
-              </div>
-          </div>
+            </div>
           <Button
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
             onClick={() => setShowSchoolOfCode(true)}

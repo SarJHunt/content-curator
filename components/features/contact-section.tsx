@@ -42,16 +42,17 @@ export default function ContactSection() {
     <Linkedin className="h-6 w-6" />
   </a>
 </div>
-              <div className="flex items-center gap-4">
-  <a 
-    href="https://chrismeah.substack.com/p/thoughts-on-the-future" 
-    target="_blank" 
+<div className="flex items-center gap-2">
+  <p className="text-muted-foreground text-lg">Read insights on</p>
+  <a
+    href="https://chrismeah.substack.com/p/thoughts-on-the-future"
+    target="_blank"
     rel="noopener noreferrer"
   >
     <img
       src="/substack_wordmark.png"
       alt="Substack"
-      className="h-6 w-auto" // Adjust the size as needed
+      className="h-7 w-auto"
     />
   </a>
 </div>
@@ -96,7 +97,7 @@ export default function ContactSection() {
     </label>
     <select
       id="project"
-      name="project" // Add a name attribute for Formspree
+      name="project" 
       defaultValue=""
       className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
     >
@@ -107,8 +108,7 @@ export default function ContactSection() {
       <option value="education">AI education/training</option>
       <option value="speaking">Public speaking</option>
       <option value="development">Custom AI development</option>
-      <option value="speaking">Public speaking</option>
-      <option value="content">Content generation</option>
+      <option value="content">Thought leadership</option>
       <option value="other">Something else</option>
     </select>
   </div>
@@ -119,7 +119,7 @@ export default function ContactSection() {
     </label>
     <textarea
       id="message"
-      name="message" // Add a name attribute for Formspree
+      name="message" 
       placeholder="Tell me a bit about your project or question..."
       rows={4}
       className="w-full px-4 py-3 rounded-lg border bg-background/50 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all resize-none"
@@ -127,7 +127,7 @@ export default function ContactSection() {
   </div>
 
   <Button
-    type="submit" // Ensure the button submits the form
+    type="submit" 
     className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
   >
     Send Message <ArrowRight className="ml-2 h-4 w-4" />

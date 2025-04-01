@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import useEmblaCarousel, { EmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
 
-export default function EmblaCarousel({ slides }: { slides: { image: string; title: string; description: string }[] }) {
+export default function EmblaCarousel({
+  slides,
+}: {
+  slides: { image?: string; iframe?: string; title: string; description: string }[];
+}) {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -26,7 +30,26 @@ export default function EmblaCarousel({ slides }: { slides: { image: string; tit
         <div className="embla__container flex gap-4">
           {slides.map((slide, index) => (
             <div className="embla__slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3" key={index}>
-              <img src={slide.image} alt={slide.title} className="rounded-lg shadow-lg w-full h-64 object-cover" />
+              {slide.iframe ? (
+                // Render iframe if the slide has an iframe property
+                <div className="relative w-full h-64">
+                  <iframe
+                    src={slide.iframe}
+                    title={slide.title}
+                    className="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                // Render image if the slide has an image property
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="rounded-lg shadow-lg w-full h-64 object-cover"
+                />
+              )}
               <h3 className="text-lg font-bold mt-2 text-center">{slide.title}</h3>
               <p className="text-muted-foreground text-center">{slide.description}</p>
             </div>

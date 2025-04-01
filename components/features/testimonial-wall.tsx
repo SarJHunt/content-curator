@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Nadeem Shabir",
     role: "Technology from Sage",
-    photo: "/nadeem.jpg",
+    photo: "/testimonials/nadeem.jpg",
     testimonial:
       "Being part of School Of Code has been one of those rare, transformative experiences. As Chris wraps up this incredible 10-year journey, I find myself reflecting on the impact School of Code has had and the many individuals whose paths have been reshaped by this mission.",
   },
@@ -16,17 +16,17 @@ const testimonials = [
     id: 2,
     name: "Clare Streets",
     role: "Former bootcamper",
-    photo: "/Clare Streets.png",
+    photo: "/testimonials/Clare Streets.png",
     testimonial:
       "The School of Code Bootcamp provides so much more than just software development training. It's an all-encompassing introduction to the tech industry and its network gives it the edge in making it a job ready experience. It’s very intensive and requires great commitment but worth every moment. Entirely life changing experience.",
   },
   {
     id: 3,
-    name: "Emily Johnson",
-    role: "CTO, FutureTech",
-    photo: "/emily-johnson.jpg",
+    name: "Perry Krug",
+    role: "Pinecone",
+    photo: "/testimonials/perry_krug.jpg",
     testimonial:
-      "Chris's AI strategy workshop was a game-changer for our team. Highly recommend his services!",
+      "Chris is extremely knowledgeable about all things AI. His insights are really valuable for me working with vector databases at Pinecone.",
   },
 ];
 
@@ -76,9 +76,9 @@ export default function TestimonialWall() {
                   <h3 className="font-bold text-lg">{testimonial.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{testimonial.role}</p>
                   <p className="text-muted-foreground text-base leading-relaxed">
-                    <span className="text-secondary font-semibold">"</span>
+                    <span className="font-semibold text-primary dark: text-white">"</span>
                     {testimonial.testimonial}
-                    <span className="text-secondary font-semibold">"</span>
+                    <span className="font-semibold text-primary dark: text-white">"</span>
                   </p>
                 </div>
               </motion.div>

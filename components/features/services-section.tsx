@@ -11,23 +11,23 @@ const services = [
     id: "strategy",
     icon: <Waypoints className="h-8 w-8" />,
     title: "Consultancy",
-    description: "Let's figure out how AI can actually help your specific situation.",
+    description: "Find out how AI fits into your strategy",
     details: "I offer bespoke, practical, and tailored consulting services and provide actionable outcomes to help your organisation adopt AI. I have experience helping organisations in public and private sectors.",
   },
   {
     id: "speaking",
     icon: <Presentation className="h-8 w-8" />,
     title: "Public speaking",
-    description: "Book me to speak at your conference or else....",
-    details: "Elevate your event with a dynamic and insightful presentation where I translate complex concepts into actionable strategies and empower audiences to embrace AI's potential. I tailor presentations and talks to leave a lasting impact, I deliver a unique blend of cutting-edge theory and real-world application, ensuring the audience gains the knowledge and confidence to navigate the future of AI.",
+    description: "From engaging, insightful keynotes to AI theory and practical crash courses",
+    details: "To date, I have delivered talks and sat on panels at many events, such as Digital Leaders Week, Birmingham Tech Week and West. I deliver insightful tailored talks, empowering audiences to embrace AI's potential.",
   
   },
   {
     id: "training",
     icon: <MessageSquare className="h-8 w-8" />,
     title: "Training",
-    description: "Conversational AI that actually understands your customers and represents your brand properly.",
-    details: "AI Chatbots & Assistants provide seamless customer interactions, improving user experience and reducing workload.",
+    description: "Understanding the potential of AI",
+    details: "Whether you're an individual wanting to understand AI's potential or an employer aiming to upskill your teams with AI knowledge, I have the experience and expertise to get actionable outcomes. ",
   }
 ];
 
@@ -42,7 +42,7 @@ export default function ServicesSection() {
           <>
             {/* Default Grid View */}
             <div className="flex flex-col items-center text-center mb-16">
-              <span className="text-secondary font-medium mb-2">LET'S GET STARTED</span>
+              <span className="text-secondary font-medium mb-2">SERVICES</span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
                 Unlocking AI potential
               </h2>

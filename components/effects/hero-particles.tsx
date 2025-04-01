@@ -42,8 +42,8 @@ export function HeroParticles() {
       minSize: number
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * canvas!.width
+        this.y = Math.random() * canvas!.height
         this.minSize = Math.random() * 2 + 1
         this.maxSize = this.minSize + Math.random() * 2
         this.size = this.minSize
@@ -80,14 +80,19 @@ export function HeroParticles() {
         }
 
         // Wrap around edges
-        if (this.x > canvas.width) this.x = 0
-        else if (this.x < 0) this.x = canvas.width
+        if (canvas) {
+          if (this.x > canvas.width) this.x = 0
+          else if (this.x < 0) this.x = canvas.width
+        }
 
-        if (this.y > canvas.height) this.y = 0
-        else if (this.y < 0) this.y = canvas.height
+        if (canvas) {
+          if (this.y > canvas.height) this.y = 0
+          else if (this.y < 0) this.y = canvas.height
+        }
       }
 
       draw() {
+        if (!ctx) return
         ctx.fillStyle = this.color
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
@@ -136,8 +141,8 @@ export function HeroParticles() {
               gradient.addColorStop(0, `hsla(252, 59%, 54%, ${opacity * 0.15})`)
               gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.15})`)
             } else {
-              gradient.addColorStop(0, `hsla(252, 59%, 48%, ${opacity * 0.2})`)
-              gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.2})`)
+              gradient.addColorStop(0, `hsla(252, 59%, 48%, ${opacity * 0.3})`)
+              gradient.addColorStop(1, `hsla(186, 83%, 42%, ${opacity * 0.3})`)
             }
 
             ctx.strokeStyle = gradient

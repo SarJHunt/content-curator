@@ -70,7 +70,6 @@ export function Header() {
           { name: "Services", href: "#services" },
           { name: "About", href: "#about" },
           { name: "Testimonials", href: "#testimonials"},
-          { name: "AI Tools", href: "/tools" },
           { name: "Contact", href: "#contact" },
         ])
         setHasAdapted(true)
