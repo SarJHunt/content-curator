@@ -3,14 +3,14 @@ import EmblaCarousel from "@/components/features/carousel"; // Import your carou
 export default function AboutSchoolOfCode({ onBack }: { onBack: () => void }) {
   const slides = [
     { image: "/carousel/launch_day.png", title: "13-week intensive bootcamp", description: "Training in the industry's best practices and standards, helping participants get a foothold in the tech industry." },
-    { image: "/carousel/mentors_2.png", title: "Mentoring", description: "xxxxxxxxxxxxxxxxxxxx" },
+    { image: "/carousel/mentors_2.png", title: "Mentoring", description: "Each bootcamper has an assigned mentor. " },
     { iframe: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7241531342474088449?compact=1", title: "Hear from bootcampers", description: "Why partner company Experian hired from the School of Code."},
-    { image: "/carousel/alumni panel.jpg", title: "xxxx", description: "Description for card 3" },
-    { image: "/carousel/soft_skills.png", title: "Acquiring soft skills", description: "Description for card 3" },
-    { image: "/carousel/networking.png", title: "Networking", description: "Description for card 3" },
-    { image: "/carousel/pair_programming.png", title: "Learning to pair-program", description: "Description for card 3" },
-    { image: "/carousel/job_placement.png", title: "Getting hired", description: "Description for card 3" },
-    { image: "/carousel/curriculum.png", title: "Structured curriculum", description: "Description for card 3" },
+    { image: "/carousel/alumni panel.jpg", title: "Workshops", description: "Walkthroughs and Q&A opportunities" },
+    { image: "/carousel/soft_skills.png", title: "Acquiring soft skills", description: "The importance of a growth mindset, and how to work with others." },
+    { image: "/carousel/networking.png", title: "Networking", description: "Using your contacts to learn more about the industry." },
+    { image: "/carousel/pair_programming.png", title: "Learning to pair-program", description: "This important tool is learned early-on." },
+    { image: "/carousel/job_placement.png", title: "Getting hired", description: "Putting knowledge learned to the test" },
+    { image: "/carousel/curriculum.png", title: "Structured curriculum", description: "A clear approach to understanding the current industry roles." },
   ];
 
   return (
