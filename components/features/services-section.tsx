@@ -12,7 +12,7 @@ const services = [
     icon: <Waypoints className="h-8 w-8" />,
     title: "Consultancy",
     description: "Find out how AI fits into your strategy",
-    details: "I offer bespoke, practical, and tailored consulting services and provide actionable outcomes to help your organisation adopt AI. I have experience helping organisations in public and private sectors.",
+    details: "I offer bespoke, practical, and tailored consulting services and provide actionable outcomes to help your organisation adopt AI. I have experience helping organisations in public and private sectors. Book a meeting with me to discuss your specific requirements.",
   },
   {
     id: "speaking",

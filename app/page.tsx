@@ -1,6 +1,6 @@
 "use client"
-import { useState } from "react"
-import { ArrowRight, BookOpenCheck } from "lucide-react";
+import { useState, useEffect } from "react"
+import { ArrowRight, ArrowUp, BookOpenCheck } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "@/components/common/animated-text";
@@ -24,6 +24,26 @@ const DynamicBackgroundWrapper = dynamic(() => import("@/components/effects/Dyna
 
 export default function Home() {
   const [showSchoolOfCode, setShowSchoolOfCode] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* AI-enhanced navigation */}
@@ -188,6 +208,15 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition"
+          aria-label="Back to Top"
+        >
+          <ArrowUp className="h-6 w-6" />
+        </button>
+      )}
     </div>
   );
 }

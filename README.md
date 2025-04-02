@@ -40,7 +40,7 @@ Steps included:
 - Identifying MVPs although honestly, that got a little fuzzy due to it being a competition! Tried to do more than was perhaps necessary.
 - Adding in the Substack link and the calendar functionality.
 - Deployment to Vercel to check early that the set-up of the proposed app works.
-- Checking that the app can be relatively easy to link to Strapi (it is). 
+- Checking that the app can be relatively easy to link to Strapi (it can be). 
 - The decision to obtain some user feedback in advance of submission.
 - The decision to outline my approach to the web app in a clear way (i.e. this document).
 
@@ -57,13 +57,19 @@ Steps included:
 
 ## 💡Additional features implemented
 
-- Light/dark mode toggle for user preference and accessibility
+- Light/dark mode toggle: for user preference and accessibility
+
 - Responsive design - so the site adjusts based on device
-- Contact form - user-friendly way of getting in touch
-- AI assistant - seems appropriate considering services offered
-- Whimsical animations throughout
-- Smart content section
-- AI tools section
+
+- Contact form - user-friendly way of getting in touch. I set up Formspree to handle submissions. A fuller review of what method would be required going forward.
+
+- AI assistant - which seemed appropriate considering the services offered but needs further consideration. 
+  
+- Smart content section: this is where the 'Insights' section appears. It has been hard-coded but the idea is that it could track what sections the user looks at and update content (when more is there) to reflect that interest.
+
+- AI tools section: as it has been removed from the nav, see the page by clicking [here](https://chris-meah.vercel.app/tools). The rationale was that it might be apt to have an example of what AI can do. But this may be better showcased through a project.
+
+- Meeting booking: I used Calendly after some research of what worked well for handling diary management including the Apple ecosystem. Going forwards, this can be reviewed as to which tool is best. 
 
 ## 👩🏻‍💻 Tech Stack
 
@@ -87,10 +93,10 @@ Steps included:
 
 ## 🎨 Color Reference
 
-| Color | Hex                                                              |
-| ----- | ---------------------------------------------------------------- |
-| Blue  | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Red   | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Colour | Hex                                       |
+| ------ | ----------------------------------------- |
+| Blue   | [#1a2693](https://hslpicker.com/#1a2693)  |
+| Red    | [#7c0317](https://hslpicker.com/#7c0317)  |
 
 ## ➡️ UX and feedback
 
@@ -104,13 +110,14 @@ I asked several people for feedback and some more formalresearch can be undertak
 - the icon with 'Dr Chris Meah' in the header was a nice design touch
 - the navigation should include testimonials for quick links
 - the AI tools menu appears and reappears so confusing for users
-- a 'back to top' button might be useful
+- a 'back-to-top' button might be useful
 
 In response to this feedback, here are the changes implemented:
 
 - the legibility of text in dark mode improved but needs some further work
 - testimonials now appear in the nav bar
-- the removal of AI tools link from the nav bar but you can see the page by clicking here. The rationale was that it might be apt to have an example of some tools but you'll be a better judge than me of whether that's really needed.
+- the removal of AI tools link from the nav bar 
+- a 'back-to-top' arrow was added in as users scroll down the page.
 
 
 ## 🗺️ Roadmap
@@ -119,6 +126,12 @@ If development of the app moves forward, then it will incorporate wider user fee
 
 Other aims include:
 
+- Adding case studies of projects you've worked on
+
+- Feed for external AI-related news
+
+- a link to FAQs about some common queries/misunderstandings about what AI incorporates
+  
 - Reviewing accessibility suggestions
 
 - Testing
@@ -131,15 +144,15 @@ Other aims include:
 
 ## ✅ Summary and some final comments
 
-- All content will, of course, need to be reviewed and amended but hopefully the app showcases the requirements of the brief along with some further ideas for development. 
+- All content will, of course, need to be reviewed but the app showcases most of the requirements of the brief along with some further ideas for development. 
 
-- The consultancy 'card' in the services section links to Calendly as an example of how the booking functionality could work. It could appear in each service description or move to be part of the contact section.
+- The consultancy 'card' in the services section links to Calendly as an example of where the booking functionality could reside. It could appear in each service description or move to be part of the contact section (which would be cleaner, on reflection).
 
-- The 'School of Code' section may need to be more prominent, for example, already 'in view' for the user rather than clicking on the link to read more. 
+- The 'School of Code' section could be more prominent; for example, already in view for the user rather than clicking on the link to see it. 
 
-- The 'About' section may need to be longer. I was unsure on how much you wanted to convey in this area vs letting the services and School of Code information speak to other credentials. 
+- The 'About' section could be longer. I was unsure of how much you wanted to convey in this area vs letting the services and School of Code information speak to other credentials. 
 
-- The 'Testimonials' section could stand out further - I was trying to gauge the right level of 'visually appealing'. 
+- The 'Testimonials' section could stand out further - perhaps it is more of a wall of images that you click on and each flips to show the quote.
 
 - I really enjoyed working on this project - it definitely provided motivation and it was satisfying to develop ideas around the brief. 
 
