@@ -2,7 +2,7 @@
 
 This is a personal responsive web app for Chris Meah using React which provides users with information about what he does, and showcases his experience in building, training, and speaking about AI.
 
-The site is deployed [here](chris-meah.vercel.app) and my approach is outlined below.
+The site is deployed [here](https://chris-meah.vercel.app) and my approach is outlined below.
 
 ## 🌠 Requirements
 
