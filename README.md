@@ -102,7 +102,7 @@ Steps included:
 
 ## ➡️ UX and feedback
 
-I asked several people for feedback and some more formalresearch can be undertaken in future. However, initial comments were useful, which stated that:
+I asked several people for feedback and some more formal research can be undertaken in future. However, initial comments were useful, which stated that:
 
 - the app hit the requirements of the brief
 - the app met the futuristic design expectations
