@@ -41,34 +41,29 @@ const NewsList: React.FC = () => {
     fetchData(searchTerm);
   };
 
-  useEffect(() => {
-    // Fetch default news on initial load
-    fetchData();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+ 
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">News Articles</h1>
 
       {/* Search Form */}
-      <form onSubmit={handleSearch} className="mb-4">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for news..."
-          className="border p-2 rounded w-full"
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600"
-        >
-          Search
-        </button>
-      </form>
+      <form onSubmit={handleSearch} className="mb-4 mt-20">
+  <label htmlFor="search" className="sr-only">Search for news</label>
+  
+      <input
+  type="text"
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  placeholder="Search for news..."
+  className="border p-2 rounded w-full bg-background text-foreground"
+/>
+   <button
+    type="submit"
+    className="bg-primary text-white px-4 py-2 mt-4 rounded"
+  >
+    Search
+  </button>
+</form>
 
       {/* News Articles */}
       <ul className="space-y-4">

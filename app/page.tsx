@@ -1,10 +1,11 @@
 import React from 'react';
 import NewsList from '../components/display-news';
+import { Header } from "../components/layout/header"
 
 const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to My Portfolio</h1>
+      <Header />
       <NewsList />
     </div>
   );
