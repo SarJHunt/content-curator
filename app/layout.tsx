@@ -6,11 +6,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Chris Meah: AI builder, speaker and trainer",
+  title: "Disovera",
   description:
-    "Chris helps others to implement effective AI solutions and strategies.",
-  keywords: ["AI consulting", "AI strategy", "AI implementation", "machine learning"],
-  author: "Chris Meah",
+    "Find podcast episodes by searching on key terms.",
+  keywords: ["podcast search", "podcast content"],
+  author: "Sarah Hunt",
   charset: "UTF-8",
 }
 

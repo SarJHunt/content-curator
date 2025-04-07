@@ -41,16 +41,16 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-2xl z-50">
           <Wand className="h-10 w-10 text-secondary" />
-          <span className="text-primary">CurioHub</span>
+          <span className="text-primary">Discovera</span>
         </Link>
 
         {/* Right-side buttons */}
         <div className="flex items-center gap-4">
-          <ThemeToggleButton />
-          <Button asChild className="btn-tertiary text-white rounded">
-  <Link href="#contact">About CurioHub</Link>
-</Button>
-        </div>
+  <ThemeToggleButton />
+  <Link href="#contact" className="btn-secondary px-2 py-2 rounded text-tertiary">
+    About Discovera
+  </Link>
+</div>
       </div>
     </motion.header>
   )

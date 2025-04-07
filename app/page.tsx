@@ -1,12 +1,15 @@
+
+console.log(process.env.MY_API_SECRET);
+
 import React from 'react';
-import NewsList from '../components/display-news';
+import PodcastList from '../components/display-results';
 import { Header } from "../components/layout/header"
 
 const HomePage: React.FC = () => {
   return (
     <div>
       <Header />
-      <NewsList />
+      <PodcastList />
     </div>
   );
 };
