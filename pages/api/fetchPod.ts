@@ -29,7 +29,7 @@ export default async function handler(
     apiSecret = fs.readFileSync(secretFilePath, 'utf8').trim();
     console.log('API Secret from file:', apiSecret);
   } catch (error) {
-    console.error('Error reading secret.txt:', error.message);
+    console.error('Error reading secret.txt:', (error as Error).message);
     return res.status(500).json({ message: 'Failed to load API secret' });
   }
 
