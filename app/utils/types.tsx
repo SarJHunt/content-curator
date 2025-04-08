@@ -6,3 +6,11 @@ export interface PodcastEpisode {
     link: string; // Channel-level link in the feed
     image: string; // Image URL for the podcast
   }
+
+  export interface Book {
+      title: string;
+      authors: string
+      link: string;
+      image: string;
+    }
+

@@ -1,8 +1,8 @@
 
-console.log(process.env.MY_API_SECRET);
 
 import React from 'react';
-import PodcastList from '../components/display-results';
+import PodcastList from '../components/display-pod';
+import BookList from '../components/display-book'
 import { Header } from "../components/layout/header"
 
 const HomePage: React.FC = () => {
@@ -10,6 +10,7 @@ const HomePage: React.FC = () => {
     <div>
       <Header />
       <PodcastList />
+      <BookList />
     </div>
   );
 };
